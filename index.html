@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> 자기야,❤️</title>
+<title>자기야,❤️</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
 
@@ -29,7 +29,9 @@ html, body {
 .heart {
     position: absolute;
     bottom: -50px;
-    color: rgba(255,255,255,0.92);
+    /* 모바일 기기에서도 강제로 색이 변하지 않고 은은한 흰색 톤을 유지 */
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: bold;
     animation: floating linear infinite;
     text-shadow:
         0 0 10px rgba(255,255,255,0.9),
@@ -80,7 +82,7 @@ html, body {
     object-fit: cover;
     filter: none;
 
-    /* [오류 수정] 최신 브라우저 표준에 맞춘 가로/세로 그라디언트 마스크 합성 */
+    /* 최신 브라우저 표준에 맞춘 가로/세로 그라디언트 마스크 합성 */
     -webkit-mask-image: 
         linear-gradient(to top, transparent 0%, black 8%, black 92%, transparent 100%),
         linear-gradient(to left, transparent 0%, black 8%, black 92%, transparent 100%);
@@ -100,7 +102,7 @@ html, body {
     justify-content: center;
     text-align: center;
     font-size: clamp(18px, 3.7vw, 28px);
-    line-height: 1.9;
+    line-height: 2.1;
     color: #E48AA3;
     font-weight: bold;
     text-shadow:
@@ -108,7 +110,7 @@ html, body {
         0 0 18px rgba(255,192,203,0.5);
 }
 
-/* 편지 제목 */
+/* 편지 제목 스타일 */
 .title {
     font-size: clamp(34px, 6vw, 60px);
     color: #FF8FB1;
@@ -117,13 +119,6 @@ html, body {
     text-shadow:
         0 0 12px rgba(255,255,255,0.9),
         0 0 24px rgba(255,182,193,0.8);
-}
-
-/* 날짜 */
-.date {
-    margin-top: 35px;
-    font-size: 22px;
-    color: #D97B97;
 }
 
 /* 모바일 화면 대응 (반응형) */
@@ -145,53 +140,52 @@ html, body {
     .right {
         font-size: 22px;
     }
-    .date {
-        font-size: 18px;
-    }
 }
 </style>
 </head>
 
 <body>
 
-<!-- 배경에 떠다니는 하트들 -->
+<!-- 배경에 떠다니는 하트들 (스마트폰 컬러 강제 변형 방지를 위해 ♡ 패턴으로 최적화) -->
 <div class="hearts">
-    <div class="heart" style="left:5%; font-size:22px; animation-duration:8s;">❤</div>
-    <div class="heart" style="left:15%; font-size:18px; animation-duration:11s;">❤</div>
-    <div class="heart" style="left:28%; font-size:26px; animation-duration:9s;">❤</div>
-    <div class="heart" style="left:40%; font-size:16px; animation-duration:13s;">❤</div>
-    <div class="heart" style="left:53%; font-size:30px; animation-duration:10s;">❤</div>
-    <div class="heart" style="left:66%; font-size:20px; animation-duration:12s;">❤</div>
-    <div class="heart" style="left:76%; font-size:24px; animation-duration:9s;">❤</div>
-    <div class="heart" style="left:88%; font-size:18px; animation-duration:14s;">❤</div>
+    <div class="heart" style="left:5%; font-size:22px; animation-duration:8s;">♡</div>
+    <div class="heart" style="left:15%; font-size:18px; animation-duration:11s;">♡</div>
+    <div class="heart" style="left:28%; font-size:26px; animation-duration:9s;">♡</div>
+    <div class="heart" style="left:40%; font-size:16px; animation-duration:13s;">♡</div>
+    <div class="heart" style="left:53%; font-size:30px; animation-duration:10s;">♡</div>
+    <div class="heart" style="left:66%; font-size:20px; animation-duration:12s;">♡</div>
+    <div class="heart" style="left:76%; font-size:24px; animation-duration:9s;">♡</div>
+    <div class="heart" style="left:88%; font-size:18px; animation-duration:14s;">♡</div>
 </div>
 
 <div class="container">
 
-    <!-- 왼쪽: 사진 -->
+    <!-- 왼쪽: 사진 구역 -->
     <div class="left">
         <img src="https://github.com/namankum/grace/blob/main/grace.jpg?raw=true" alt="Grace">
     </div>
 
-    <!-- 오른쪽: 편지 내용 -->
+    <!-- 오른쪽: 편지 내용 구역 -->
     <div class="right">
-
+        <div class="title">자기야,❤️</div>
         
-        자기야,❤️ <br> 요즘 누구보다 열심히 공연하고<br>
-        스케줄 끝내는거 내가 제일 잘 알아요.<br>       
+        요즘 누구보다 열심히 공연하고<br>
+        스케줄 끝내는거 내가 제일 잘 알아요.<br><br>
+        
         그러니 가끔 지치고 힘든 날도 있겠지만<br>
         자기 옆에는 항상 내가 있다는 거<br>
-        잊지 않았으면 좋겠어요.<br>      
+        잊지 않았으면 좋겠어요.<br><br>
+        
         결과보다도 지금까지 잘 버텨온 자기 자체가<br>
-        정말 멋있고 자랑스러워요.<br>      
+        정말 멋있고 자랑스러워요.<br><br>
+        
         오늘도 내일도 매일매일<br>
         자기답게 잘 해낼 거라고 믿고<br>
-        많이 응원하고 있어요.사랑해요❤️<br>
+        많이 응원하고 있어요.<br><br>
+        
+        사랑해요❤️<br>
         내가 사랑한다는거 잊지 마요❤️<br>
         사랑해요❤️
-
-        <div class="date">
-        </div>
     </div>
 
 </div>
